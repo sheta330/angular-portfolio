@@ -1,0 +1,30 @@
+<section class="blog-section">
+  <div class="container">
+    <h1 class="page-title">Blog & Articles</h1>
+    
+    <div class="category-filter">
+      <button 
+        *ngFor="let category of categories"
+        class="category-btn"
+        [class.active]="selectedCategory === category"
+        (click)="filterByCategory(category)">
+        {{ category }}
+      </button>
+    </div>
+
+    <div class="articles-grid">
+      <article class="article-card" *ngFor="let article of filteredArticles">
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">{{ article.category }}</span>
+            <span class="article-date">{{ article.date }}</span>
+            <span class="article-read-time">{{ article.readTime }}</span>
+          </div>
+          <h2 class="article-title">{{ article.title }}</h2>
+          <p class="article-excerpt">{{ article.excerpt }}</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

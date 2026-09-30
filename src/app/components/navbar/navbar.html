@@ -1,0 +1,61 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a routerLink="/home" class="navbar-brand" (click)="closeMenu()">
+      <span class="brand-text">Khaled Sheta</span>
+    </a>
+
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+    </button>
+
+    <ul class="navbar-menu" [class.open]="isMenuOpen">
+      <li class="navbar-item">
+        <a 
+          routerLink="/home" 
+          class="navbar-link"
+          [class.active]="isActive('/home')"
+          (click)="closeMenu()">
+          Home
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a 
+          routerLink="/about" 
+          class="navbar-link"
+          [class.active]="isActive('/about')"
+          (click)="closeMenu()">
+          About
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a 
+          routerLink="/projects" 
+          class="navbar-link"
+          [class.active]="isActive('/projects')"
+          (click)="closeMenu()">
+          Projects
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a 
+          routerLink="/blog" 
+          class="navbar-link"
+          [class.active]="isActive('/blog')"
+          (click)="closeMenu()">
+          Blog
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a 
+          routerLink="/contact" 
+          class="navbar-link"
+          [class.active]="isActive('/contact')"
+          (click)="closeMenu()">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

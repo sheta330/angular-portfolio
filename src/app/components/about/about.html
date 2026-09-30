@@ -1,0 +1,56 @@
+<section class="about-section">
+  <div class="container">
+    <h1 class="page-title">About Me</h1>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Who I Am</h2>
+        <p>
+          Visionary Solutions Architect with 5+ years of experience in Enterprise Digital Transformation, 
+          specializing in AI integration, payment gateway architectures, and clean architecture principles. 
+          Proven track record of building production-ready systems from scratch using advanced patterns: 
+          Clean Architecture, Event-Driven Architecture, Multi-Agent Systems, and RAG.
+        </p>
+        <p>
+          Expert in translating complex business requirements into scalable, secure, and maintainable 
+          technical solutions. Strong advocate for military-grade security, resilience patterns, and 
+          team leadership through architecture standards.
+        </p>
+        <p>
+          I'm passionate about AI Research (Multi-Agent Systems, RAG, LLM Optimization), 
+          Software Architecture (Clean Architecture, Event-Driven Systems), Open Source contributions, 
+          and Mentoring through technical writing and code reviews.
+        </p>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h2>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-item" *ngFor="let skill of skills">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-level">{{ skill.level }}%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-section">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item" *ngFor="let exp of experience">
+          <div class="timeline-content">
+            <h3>{{ exp.title }}</h3>
+            <h4>{{ exp.company }}</h4>
+            <span class="timeline-date">{{ exp.period }}</span>
+            <p>{{ exp.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
